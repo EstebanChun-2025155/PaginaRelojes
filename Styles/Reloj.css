@@ -1,0 +1,193 @@
+/* Estilos*/
+:root{
+  --fondo: #0b1220;
+  --panel: #0f1a33;
+  --borde: rgba(255,255,255,.12);
+  --texto: #eaf0ff;
+  --texto-suave: #b8c2e0;
+  --acento: #2aa7ff;
+  --radio: 14px;
+}
+
+/* Base */
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--fondo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+a{ color: inherit; text-decoration: none; }
+img{ max-width: 100%; display: block; }
+
+.container{
+  width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Menu */
+.barraSuperior{
+    background: linear-gradient(to bottom, #0f1a33, #0b1220);
+    border-bottom: 1px solid var(--borde);
+}
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 12px ;
+}
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.brand img{
+    width: 34px;
+    height: 34px;
+}
+.titulo strong{
+    font-size: 16px;
+}
+
+/*Links del menu */
+.nav{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.nav > a{
+    padding: 9px 12px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    font-weight: 600;
+    font-size: 14px;
+}
+.nav > a:hover{
+    background: rgba(255,255,255,.06);
+    border-color: var(--borde);
+}
+
+/* Portada */
+section.portada{
+    padding: 28px 0 18px;
+}
+
+.container.portada{
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 18px;
+    align-items: center;
+}
+
+/*Tarjeta Base */
+.tarjeta{
+    background: rgba(255,255,255,.05);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio);
+    box-shadow: 0 10px 26px rgba(0,0,0,.35);
+    padding: 18px;
+}
+.tarjeta.portada h1{
+    margin: 0 0 8px;
+    font-size: 32px;
+}
+.tarjeta.portada p{
+    margin: 0 0 14px;
+    color: var(--texto-suave);
+}
+
+/* Etiquetas */
+.etiquetas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 12px 0;
+}
+.etiqueta{
+    padding: 6px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--borde);
+    background: rgba(0,0,0,.15);
+    color: var(--texto-suave);
+    font-size: 12px;
+}
+.acciones{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid var(--borde);
+    background: rgba(255,255,255,.06);
+    font-weight: 700;
+    font-size: 14px;
+}
+.btn.Principal{
+    background: rgba(42,167,255,.20);
+    border-color: rgba(42,167,255,.45);
+}
+
+/* Secciones */
+.seccion{
+    padding: 18px 0 30px;
+}
+.seccion h2{
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+.grid3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+.tarjeta.informacion{
+    padding: 16px;
+}
+.tarjeta.informacion h3{
+    margin: 0 0 6px;
+}
+.tarjeta.informacion p{
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 14px;
+}
+
+/* Nota */
+.nota{
+    padding: 14px 16px;
+    border-radius: var(--radio);
+    border: 1px dashed rgba(255,255,255,.20);
+    background: rgba(0,0,0,.12);
+    color: var(--texto-suave);
+}
+
+/* Tabla */
+.tarjeta.tabla{
+    overflow: auto;
+    padding: 0;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 720px;
+}
+th, td{
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--borde);
+    text-align: left;
+    font-size: 14px;
+}
+th{
+    color: var(--texto);
+}
+td{
+    color: var(--texto-suave);
+}
